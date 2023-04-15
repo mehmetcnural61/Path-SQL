@@ -65,6 +65,11 @@ insert into employee (id, name, birthday, email) values (50, 'Anatollo', '2003-0
 /* Sütunların her birine göre diğer sütunları güncelleyecek
  5 adet UPDATE işlemi yapalım. */
 --Case'den biraz daha farklı olarak denemeler yapıldı
+UPDATE employee
+ 	SET name='Updated',
+ 	email='Updated'
+WHERE id <5
+RETURNING*;
 
 UPDATE employee
 SET name = 'Updated'
